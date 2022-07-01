@@ -30,9 +30,10 @@ modules:
     post-install:
       - python3 -m compileall /app/bin
     sources:
-    - type: archive
-      url: https://github.com/soyersoyer/cameractrls/archive/refs/tags/v0.4.5.tar.gz
-      sha256: 5d8685b750f255bf36ee97c84dda7dc223a4f76ee094f450752ed20c4428a8b1
+    - type: git
+      url: https://github.com/soyersoyer/cameractrls
+      tag: v0.4.6
+      commit: 411b66bd0bd6f30c37c742759abb65f58e651470
     modules:
       - name: pygobject
         buildsystem: meson
