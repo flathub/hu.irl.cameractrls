@@ -1,6 +1,6 @@
 app-id: hu.irl.cameractrls
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 finish-args:
   - --device=all
@@ -32,8 +32,8 @@ modules:
     sources:
     - type: git
       url: https://github.com/soyersoyer/cameractrls
-      tag: v0.4.9
-      commit: 079b9116b0a62d62e4f69b601a811bd873c3a3c6
+      tag: v0.4.10
+      commit: 9316db0fc44d12f70c34ace9db034973bc3492e1
     modules:
       - name: pygobject
         buildsystem: meson
