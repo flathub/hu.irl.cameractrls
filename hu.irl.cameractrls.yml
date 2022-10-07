@@ -6,7 +6,6 @@ finish-args:
   - --device=all
   - --share=ipc
   - --socket=x11
-  - --socket=wayland
 command: cameractrlsgtk.py
 cleanup:
   - /include
