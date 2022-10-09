@@ -15,7 +15,7 @@ cleanup:
   - '*.la'
 modules:
   - name: cameractrls
-    buildsystem: simple
+    buildsystem:  simple
     build-commands:
       - install -D -t /app/bin cameractrls.py cameractrlsgtk.py cameraview.py
       - install -D -t /app/bin/images images/icon_256.png
