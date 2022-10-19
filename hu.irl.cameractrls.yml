@@ -31,8 +31,8 @@ modules:
     sources:
     - type: git
       url: https://github.com/soyersoyer/cameractrls
-      tag: v0.4.10
-      commit: 9316db0fc44d12f70c34ace9db034973bc3492e1
+      tag: v0.4.11
+      commit: ee26867b9dfbb9f8dd1634810c2460abb3591f92
     modules:
       - name: pygobject
         buildsystem: meson
@@ -42,5 +42,5 @@ modules:
             - -Dtests=false
         sources:
         - type: archive
-          url: https://gitlab.gnome.org/GNOME/pygobject/-/archive/3.42.1/pygobject-3.42.1.tar.gz
-          sha256: 53fff1eef7f94533f18164c2df2fcc16cd447aac71f34efc8a735a21bc3bebd5
+          url: https://gitlab.gnome.org/GNOME/pygobject/-/archive/3.42.2/pygobject-3.42.2.tar.gz
+          sha256: 56e6833f875bfe55409c780b9c87a9fc426c1cd55b3c65836de9d384d206201f
