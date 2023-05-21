@@ -45,18 +45,7 @@ modules:
         sources:
           - type: git
             url: https://github.com/libsdl-org/SDL/
-            tag: release-2.26.5
-        cleanup:
-          - /bin/sdl2-config
-          - /include
-          - /lib/libSDL2.la
-          - /lib/libSDL2main.a
-          - /lib/libSDL2main.la
-          - /lib/libSDL2_test.a
-          - /lib/libSDL2_test.la
-          - /lib/cmake
-          - /share/aclocal
-          - /lib/pkgconfig
+            commit: 63b8af3558ffe7dad6982ccc76076ffbab00e528
         modules:
           - name: libdecor
             buildsystem: meson
@@ -64,8 +53,5 @@ modules:
               - -Ddemo=false
             sources:
               - type: git
-                url: https://gitlab.freedesktop.org/libdecor/libdecor/
-                commit: 0fc00cb603899efe2de42c4c8f29e27571388641
-            cleanup:
-              - "/include"
-              - "/lib/pkgconfig"
+                url: https://gitlab.freedesktop.org/soyer/libdecor/
+                commit: 54227d07df1feb9eb053088cc905a143f4e86951
