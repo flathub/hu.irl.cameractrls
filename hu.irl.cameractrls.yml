@@ -5,7 +5,8 @@ sdk: org.freedesktop.Sdk
 finish-args:
   - --device=all
   - --share=ipc
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
 command: cameractrlsgtk.py
 cleanup:
   - /include
@@ -27,15 +28,44 @@ modules:
     - type: git
       url: https://github.com/soyersoyer/cameractrls
       tag: v0.5.3
-      commit: 5c8910d65bad4b0b2aa6d110cc76b1de91c09c09
     modules:
       - name: pygobject
         buildsystem: meson
-        build-options:
-          config-opts:
-            - -Dpycairo=disabled
-            - -Dtests=false
+        config-opts:
+          - -Dpycairo=disabled
+          - -Dtests=false
         sources:
-        - type: archive
-          url: https://gitlab.gnome.org/GNOME/pygobject/-/archive/3.44.1/pygobject-3.44.1.tar.gz
-          sha256: f2c3f85161c32791a60c2f2b54fdb89e38f1acde0f6a8f0be4e0e36f73f144ad
+          - type: git
+            url: https://gitlab.gnome.org/GNOME/pygobject/
+            tag: 3.44.1
+      - name: SDL2
+        buildsystem: autotools
+        config-opts:
+          - --disable-static
+        sources:
+          - type: git
+            url: https://github.com/libsdl-org/SDL/
+            tag: release-2.26.5
+        cleanup:
+          - /bin/sdl2-config
+          - /include
+          - /lib/libSDL2.la
+          - /lib/libSDL2main.a
+          - /lib/libSDL2main.la
+          - /lib/libSDL2_test.a
+          - /lib/libSDL2_test.la
+          - /lib/cmake
+          - /share/aclocal
+          - /lib/pkgconfig
+        modules:
+          - name: libdecor
+            buildsystem: meson
+            config-opts:
+              - -Ddemo=false
+            sources:
+              - type: git
+                url: https://gitlab.freedesktop.org/libdecor/libdecor/
+                commit: 0fc00cb603899efe2de42c4c8f29e27571388641
+            cleanup:
+              - "/include"
+              - "/lib/pkgconfig"
