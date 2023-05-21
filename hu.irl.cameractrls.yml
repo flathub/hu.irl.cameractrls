@@ -27,7 +27,7 @@ modules:
     sources:
     - type: git
       url: https://github.com/soyersoyer/cameractrls
-      tag: v0.5.3
+      tag: v0.5.4
     modules:
       - name: pygobject
         buildsystem: meson
