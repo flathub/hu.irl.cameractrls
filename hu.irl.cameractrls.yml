@@ -64,8 +64,8 @@ modules:
               - -Ddemo=false
             sources:
               - type: git
-                url: https://gitlab.freedesktop.org/libdecor/libdecor/
-                commit: 0fc00cb603899efe2de42c4c8f29e27571388641
+                url: https://gitlab.freedesktop.org/soyer/libdecor/
+                commit: 6da4cba774ba9ebdc9c9c4ec7fec3e23d6b3b163
             cleanup:
               - "/include"
               - "/lib/pkgconfig"
