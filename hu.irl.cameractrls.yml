@@ -45,7 +45,7 @@ modules:
         sources:
           - type: git
             url: https://github.com/libsdl-org/SDL/
-            tag: release-2.26.5
+            commit: 63b8af3558ffe7dad6982ccc76076ffbab00e528
         cleanup:
           - /bin/sdl2-config
           - /include
@@ -64,8 +64,8 @@ modules:
               - -Ddemo=false
             sources:
               - type: git
-                url: https://gitlab.freedesktop.org/libdecor/libdecor/
-                commit: 0fc00cb603899efe2de42c4c8f29e27571388641
+                url: https://gitlab.freedesktop.org/soyer/libdecor/
+                commit: 31a0ffcc780c0cac976aa57000e40d51123fcddc
             cleanup:
               - "/include"
               - "/lib/pkgconfig"
