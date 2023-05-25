@@ -65,7 +65,7 @@ modules:
             sources:
               - type: git
                 url: https://gitlab.freedesktop.org/soyer/libdecor/
-                commit: 31a0ffcc780c0cac976aa57000e40d51123fcddc
+                commit: 93f71385fbdf2af84fddda026d6d1137cde0814f 
             cleanup:
               - "/include"
               - "/lib/pkgconfig"
