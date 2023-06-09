@@ -27,7 +27,7 @@ modules:
     sources:
     - type: git
       url: https://github.com/soyersoyer/cameractrls
-      tag: v0.5.4
+      tag: v0.5.5
     modules:
       - name: pygobject
         buildsystem: meson
@@ -45,7 +45,7 @@ modules:
         sources:
           - type: git
             url: https://github.com/libsdl-org/SDL/
-            commit: 63b8af3558ffe7dad6982ccc76076ffbab00e528
+            commit: 1cdd6dc82968274123b3124e4cae2d155bcd6cc8
         cleanup:
           - /bin/sdl2-config
           - /include
@@ -65,7 +65,7 @@ modules:
             sources:
               - type: git
                 url: https://gitlab.freedesktop.org/soyer/libdecor/
-                commit: 93f71385fbdf2af84fddda026d6d1137cde0814f 
+                commit: 93f71385fbdf2af84fddda026d6d1137cde0814f
             cleanup:
               - "/include"
               - "/lib/pkgconfig"
