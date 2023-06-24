@@ -27,7 +27,7 @@ modules:
     sources:
     - type: git
       url: https://github.com/soyersoyer/cameractrls
-      tag: v0.5.6
+      tag: v0.5.7
     modules:
       - name: pygobject
         buildsystem: meson
@@ -45,7 +45,7 @@ modules:
         sources:
           - type: git
             url: https://github.com/libsdl-org/SDL/
-            commit: 1cdd6dc82968274123b3124e4cae2d155bcd6cc8
+            tag: release-2.28.0
         cleanup:
           - /bin/sdl2-config
           - /include
