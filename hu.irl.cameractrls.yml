@@ -27,7 +27,7 @@ modules:
     sources:
     - type: git
       url: https://github.com/soyersoyer/cameractrls
-      tag: v0.5.11
+      tag: v0.5.12
     modules:
       - name: pygobject
         buildsystem: meson
@@ -37,7 +37,7 @@ modules:
         sources:
           - type: git
             url: https://gitlab.gnome.org/GNOME/pygobject.git
-            tag: 3.44.2
+            tag: 3.46.0
       - name: libdecor
         buildsystem: meson
         config-opts:
@@ -46,7 +46,7 @@ modules:
         sources:
           - type: git
             url: https://gitlab.freedesktop.org/libdecor/libdecor.git
-            tag: 0.2.0
+            tag: 0.2.1
         cleanup:
           - "/include"
           - "/lib/pkgconfig"
