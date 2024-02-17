@@ -57,6 +57,8 @@ modules:
           - "/include"
           - "/lib/pkgconfig"
       - name: libspnav
+        config-opts:
+          - --disable-debug
         sources:
           - type: git
             url: https://github.com/FreeSpacenav/libspnav.git
