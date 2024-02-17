@@ -7,6 +7,8 @@ finish-args:
   - --share=ipc
   - --socket=wayland
   - --socket=fallback-x11
+  - --filesystem=/run/spnav.sock:ro
+  - --env=SPNAV_SOCKET=/run/spnav.sock
 command: cameractrlsgtk.py
 cleanup:
   - /include
@@ -19,6 +21,7 @@ modules:
     buildsystem: simple
     build-commands:
       - install -D -t /app/bin cameractrls.py cameractrlsgtk.py cameraview.py
+      - install -D -t /app/bin cameraptzspnav.py cameraptzgame.py cameraptzmidi.py
       - install -D -t /app/share/metainfo pkg/hu.irl.cameractrls.metainfo.xml
       - install -D -t /app/share/icons/hicolor/scalable/apps pkg/hu.irl.cameractrls.svg
       - install -D -t /app/share/applications pkg/hu.irl.cameractrls.desktop
@@ -27,7 +30,8 @@ modules:
     sources:
     - type: git
       url: https://github.com/soyersoyer/cameractrls
-      tag: v0.5.13
+      tag: v0.5.15
+      commit: 75e22d05526e68d654f725d733134cc812fa061a
     modules:
       - name: pygobject
         buildsystem: meson
@@ -38,6 +42,7 @@ modules:
           - type: git
             url: https://gitlab.gnome.org/GNOME/pygobject.git
             tag: 3.46.0
+            commit: b5b3fb1fcdbf539dd0cc04120ee4a8e81bce403c
       - name: libdecor
         buildsystem: meson
         config-opts:
@@ -46,7 +51,14 @@ modules:
         sources:
           - type: git
             url: https://gitlab.freedesktop.org/libdecor/libdecor.git
-            tag: 0.2.1
+            tag: 0.2.2
+            commit: 7807ae3480f5c6a37c5e8505d94af1e764aaf704
         cleanup:
           - "/include"
           - "/lib/pkgconfig"
+      - name: libspnav
+        sources:
+          - type: git
+            url: https://github.com/FreeSpacenav/libspnav.git
+            tag: v1.1
+            commit: 1716ccf15fa59a3acaeb9805262fc23613fd6a40
