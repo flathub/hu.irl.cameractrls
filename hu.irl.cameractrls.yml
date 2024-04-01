@@ -20,8 +20,8 @@ modules:
   - name: cameractrls
     buildsystem: simple
     build-commands:
-      - install -D -t /app/bin cameractrls.py cameractrlsd.py cameractrlsgtk.py cameraview.py
-      - install -D -t /app/bin cameraptzspnav.py cameraptzgame.py cameraptzmidi.py
+      - install -D -t /app/bin camera{ctrls{,d,gtk},view}.py
+      - install -D -t /app/bin cameraptz{spnav,game,midi}.py
       - install -D -t /app/share/metainfo pkg/hu.irl.cameractrls.metainfo.xml
       - install -D -t /app/share/icons/hicolor/scalable/apps pkg/hu.irl.cameractrls.svg
       - install -D -t /app/share/applications pkg/hu.irl.cameractrls.desktop
@@ -30,8 +30,8 @@ modules:
     sources:
     - type: git
       url: https://github.com/soyersoyer/cameractrls
-      tag: v0.6.0
-      commit: 28703b42bdcf323cbe009d00afdf225a59765eac
+#      tag: v0.6.0
+      commit: 49829cc1693f4520b4fd875c3080e251b46ac241
     modules:
       - name: pygobject
         buildsystem: meson
