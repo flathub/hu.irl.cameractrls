@@ -30,8 +30,8 @@ modules:
     sources:
     - type: git
       url: https://github.com/soyersoyer/cameractrls
-#      tag: v0.6.1
-      commit: d41dd0cb61765c4983fe87d9de024464f0334d38
+      tag: v0.6.2
+      commit: 4cfeb5b81ad417b2cf37e91f118201eeca51a8bb
     modules:
       - name: pygobject
         buildsystem: meson
