@@ -1,6 +1,6 @@
 app-id: hu.irl.cameractrls
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 finish-args:
   - --device=all
@@ -33,16 +33,6 @@ modules:
       tag: v0.6.7
       commit: 39079b459e530914b36dca94b83e8929e45b53d8
     modules:
-      - name: pygobject
-        buildsystem: meson
-        config-opts:
-          - -Dpycairo=disabled
-          - -Dtests=false
-        sources:
-          - type: git
-            url: https://gitlab.gnome.org/GNOME/pygobject.git
-            tag: 3.46.0
-            commit: b5b3fb1fcdbf539dd0cc04120ee4a8e81bce403c
       - name: libspnav
         config-opts:
           - --disable-debug
