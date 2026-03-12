@@ -1,7 +1,7 @@
 app-id: hu.irl.cameractrls
-runtime: org.freedesktop.Platform
-runtime-version: '24.08'
-sdk: org.freedesktop.Sdk
+runtime: org.gnome.Platform
+runtime-version: '49'
+sdk: org.gnome.Sdk
 finish-args:
   - --device=all
   - --share=ipc
@@ -9,7 +9,7 @@ finish-args:
   - --socket=fallback-x11
   - --filesystem=/run/spnav.sock:ro
   - --env=SPNAV_SOCKET=/run/spnav.sock
-command: cameractrlsgtk.py
+command: cameractrlsgtk4.py
 cleanup:
   - /include
   - /lib/cmake
@@ -20,7 +20,7 @@ modules:
   - name: cameractrls
     buildsystem: simple
     build-commands:
-      - install -D -t /app/bin camera{ctrls{,d,gtk},view}.py
+      - install -D -t /app/bin camera{ctrls{,d,gtk,gtk4},view}.py
       - install -D -t /app/bin cameraptz{spnav,game,midi}.py
       - install -D -t /app/share/metainfo pkg/hu.irl.cameractrls.metainfo.xml
       - install -D -t /app/share/icons/hicolor/scalable/apps pkg/hu.irl.cameractrls.svg
