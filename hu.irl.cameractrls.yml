@@ -30,8 +30,8 @@ modules:
     sources:
     - type: git
       url: https://github.com/soyersoyer/cameractrls
-      tag: v0.6.10
-      commit: d2770572513ed38b52e9eb72c8d0466aa53045a3
+#      tag: v0.6.10
+      commit: a09a3ea80276ee4c8d8e52eed82518433f7f9a16
     modules:
       - name: libspnav
         config-opts:
